@@ -25,7 +25,7 @@ font pango:Hack 8
 # clear in small sizes. However, its unicode glyph coverage is limited, the old
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesnâ��t scale on retina/hidpi displays.
-hide_edge_borders both
+hide_edge_borders smart
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -197,12 +197,11 @@ set $crust #11111b
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $base               $base              $text-color          #00ff00
-client.unfocused        $base               $base              $inactive-text-color #00ff00
-client.focused_inactive $base               $base              $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+client.focused          $pink               $pink              $crust               $sky 
+client.unfocused        $mantle             $mantle          $inactive-text-color $sky
+client.focused_inactive $mantle             $mantle          $inactive-text-color $sky
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color         $sky 
 
-# hide_edge_borders both
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -220,6 +219,8 @@ bar {
 	}
 }
 
+default_border pixel 1
+default_floating_border pixel 1
 
 exec "setxkbmap -layout gb"
 
