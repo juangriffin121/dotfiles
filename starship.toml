@@ -1,0 +1,82 @@
+# Use custom format:
+format="$directory$git_branch$git_status\n$character"
+palette = 'base16'
+add_newline = true 
+
+# Prompt symbols 
+[character]
+# success_symbol = "[🞈](fg:base03)"
+# error_symbol = "[🞈](base08)"
+# vicmd_symbol = "[🞈](fg:yellow)"
+success_symbol = "[>](fg:base10)"
+error_symbol = "[>](fg:base08)"
+vicmd_symbol = "[<](fg:base09)"
+
+[directory]
+format = "[$read_only]($read_only_style)[$path](base13)"
+truncation_length = 4
+home_symbol= "~"
+read_only="󰌾 "
+read_only_style="base08"
+
+[git_branch]
+format = " [ $branch](base10) "
+
+[git_status]
+format = '([\[$ahead_behind$untracked$staged\]]($style) )'
+style = "base04"
+ahead = 'a$count'
+diverged = 'a$ahead_count b$behind_count'
+behind = 'b$count'
+untracked = "u$count"
+staged = "+$count"
+
+# Start flavours
+# base16 Catppuccin Mocha colorscheme for starship
+# Author: https://github.com/catppuccin/catppuccin
+[palettes.base16]
+base00 = '#1e1d2e'
+base01 = '#11111b'
+base02 = '#313244'
+base03 = '#45475a'
+base04 = '#585b70'
+base05 = '#cdd6f4'
+base06 = '#f5e0dc'
+base07 = '#b4befe'
+base08 = '#f38ba8'
+base09 = '#fab387'
+base10 = '#f9e2af'
+base11 = '#a6e3a1'
+base12 = '#94e2d5'
+base13 = '#89b4fa'
+base14 = '#cba6f7'
+base15 = '#f2cdcd'
+# End flavours
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"

@@ -12,6 +12,7 @@ commands=(
 )
 
 if [[ $HDMI_STATUS == "connected" ]]; then
+    eval "/home/griffin/.config/i3/set_hdmi_audio.sh"
     PS3='Please select an option: '
     select opt in "Mirror screens" "Show screen only on PC" "Show screen only on HDMI" "Show screen only on HDMI HD" "Separate screens" "Do nothing" 
     do
@@ -23,6 +24,8 @@ if [[ $HDMI_STATUS == "connected" ]]; then
         fi
     done
 else
+  eval "/home/griffin/.config/i3/set_pc_audio.sh"
   eval "/home/griffin/.screenlayout/pc_only.sh"
 fi
 
+eval "/home/griffin/.config/i3/set_wallpaper.sh"
