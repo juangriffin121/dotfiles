@@ -6,3 +6,8 @@ WINIT_X11_SCALE_FACTOR = "0.7"
 [window]
 padding = {x = 5, y = 3}
 decorations = "Full"
+[font]
+normal.family = "Hack Nerd Font Propo"
+bold.family = "Hack Nerd Font Propo"
+italic.family = "Hack Nerd Font Propo"
+bold_italic.family = "Hack Nerd Font Propo"
