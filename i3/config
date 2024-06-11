@@ -11,6 +11,7 @@
 
 set $mod Mod4
 
+exec --no-startup-id picom
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Hack 8
@@ -91,7 +92,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+z focus child
 
 set $ws1 "1"
 set $ws2 "2"
@@ -197,7 +198,7 @@ set $crust #11111b
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $pink               $pink              $crust               $sky 
+client.focused          $mauve              $mauve             $crust               $sky 
 client.unfocused        $mantle             $mantle          $inactive-text-color $sky
 client.focused_inactive $mantle             $mantle          $inactive-text-color $sky
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color         $sky 
@@ -215,7 +216,7 @@ bar {
 		background $base
 	    	separator #757575
 		#                  border             background         text
-		focused_workspace  $pink              $pink          $base
+		focused_workspace  $mauve             $mauve             $base
 		inactive_workspace $mantle            $base            $text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
@@ -257,10 +258,17 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 bindsym Shift+XF86MonBrightnessUp exec --no-startup-id light -A 1
 bindsym Shift+XF86MonBrightnessDown exec --no-startup-id light -U 1
-bindsym $mod+d exec  dmenu_run
+bindsym $mod+d exec rofi -show drun 
 exec --no-startup-id xset dpms 0 0 4800 
 exec --no-startup-id xset s 4800 4800
 bindsym $mod+Shift+s exec gnome-screenshot -a
-bindsym F10 exec /home/griffin/.config/i3/monitors_terminal.sh
+bindsym F10 exec /home/griffin/.config/i3/monitors_rofi.sh
 exec --no-startup-id /home/griffin/.local/bin/start_kmonad.sh
+exec --no-startup-id nm-applet
 
+smart_gaps on
+# Inner gaps for all windows: space between two adjacent windows (or split containers).
+gaps inner 7
+
+# Outer gaps for all windows: space along the screen edges.
+# gaps outer 5

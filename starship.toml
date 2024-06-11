@@ -1,5 +1,5 @@
 # Use custom format:
-format="$directory$git_branch$git_status\n$character"
+format="$directory$git_branch$git_status$python$rust\n$character"
 palette = 'base16'
 add_newline = true 
 
@@ -80,3 +80,5 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+[python]
+format = '[ (\($virtualenv\))](base13)' 
