@@ -174,3 +174,5 @@ source ~/.yt-dlp-completions.bash
 export MANPAGER='nvim +Man!'
 export XDG_CONFIG_HOME="$HOME/.config"
 export GTK_USE_PORTAL=1
+
+eval "$(zoxide init bash)"
