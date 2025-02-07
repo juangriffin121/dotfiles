@@ -1,0 +1,31 @@
+#!/bin/bash
+
+HDMI_STATUS=$(xrandr | grep -m 1 HDMI | awk '{ print $2 }')
+
+commands=(
+  ""
+  "/home/griffin/.screenlayout/mirrored.sh"
+  "/home/griffin/.screenlayout/pc_only.sh"
+  "/home/griffin/.screenlayout/hdmi_only.sh"
+  "/home/griffin/.screenlayout/hdmi_only_HD.sh"
+  "/home/griffin/.screenlayout/separated.sh"
+)
+
+if [[ $HDMI_STATUS == "connected" ]]; then
+    eval "/home/griffin/.config/i3/set_hdmi_audio.sh"
+    PS3='Please select an option: '
+    select opt in "Mirror screens" "Show screen only on PC" "Show screen only on HDMI" "Show screen only on HDMI HD" "Separate screens" "Do nothing" 
+    do
+        if [[ $REPLY -ge 1 && $REPLY -le ${#commands[@]} ]]; then
+            eval "${commands[$REPLY]}"
+            break
+        else
+            echo "Invalid option. Please select a valid option."
+        fi
+    done
+else
+  eval "/home/griffin/.config/i3/set_pc_audio.sh"
+  eval "/home/griffin/.screenlayout/pc_only.sh"
+fi
+
+eval "/home/griffin/.config/i3/set_wallpaper.sh"
