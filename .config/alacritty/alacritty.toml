@@ -1,0 +1,15 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+[env]
+WINIT_X11_SCALE_FACTOR = "0.9"
+[window]
+opacity = 0.5
+padding = {x = 5, y = 3}
+decorations = "Full"
+[font]
+size = 10.0
+normal.family = "Hack Nerd Font Propo"
+bold.family = "Hack Nerd Font Propo"
+italic.family = "Hack Nerd Font Propo"
+bold_italic.family = "Hack Nerd Font Propo"
