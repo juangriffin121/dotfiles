@@ -175,5 +175,5 @@ export MANPAGER='nvim +Man!'
 export XDG_CONFIG_HOME="$HOME/.config"
 export GTK_USE_PORTAL=1
 
-eval "$(zoxide init bash)"
+eval "$(zoxide init --cmd cd bash)"
 eval `dircolors ~/git/Catppuccin-dircolors/bliss.dircolors`
