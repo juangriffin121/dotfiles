@@ -273,7 +273,8 @@ bindsym F10 exec /home/griffin/.config/i3/monitors_rofi.sh
 # Open vim-anywhere as a floating window
 for_window [class="Gvim" instance="gvim"] floating enable
 bindsym $mod+Shift+v exec ~/.vim-anywhere/bin/run 
-bindsym $mod+y exec /home/griffin/.config/i3/yazi-launcher.sh
+bindsym $mod+Shift+y exec /home/griffin/.config/i3/yazi-launcher.sh
+bindsym $mod+y exec kitty -e bash -ic 'yazi'
 bindsym $mod+Shift+Return exec kitty
 # bindsym $mod+y exec kitty -e yazi
 
