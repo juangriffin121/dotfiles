@@ -1,105 +1,12 @@
-configuration{
-    modi: "run,drun,window";
-    lines: 9;
-    font: "Hack 8";
+configuration {
     show-icons: true;
-    icon-theme: "Oranchelo";
-    terminal: "st";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: " Apps ";
-    display-run: " Run ";
-    display-window: "  window";
-    display-Network: " 󰤨  Network";
-    sidebar-mode: true;
+
+    display-ssh:    "󰣀 ssh:";
+    display-run:    "󱓞 run:";
+    display-drun:   "󰣖 drun:";
+    display-window: "󱂬 window:";
+    display-combi:  "󰕘 combi:";
+    display-filebrowser: "󰉋 filebrowser:";
 }
 
-@theme "catppuccin-mocha2"
-
-element-text, element-icon , mode-switcher {
-    background-color: inherit;
-    text-color:       inherit;
-}
-
-window {
-    height: 310px;
-    border: 3px;
-    border-color: @border-col;
-    background-color: @bg-col;
-    border-radius: 10px;
-}
-
-mainbox {
-    background-color: @bg-col;
-}
-
-inputbar {
-    children: [prompt,entry];
-    background-color: @bg-col;
-    border-radius: 10px;
-    padding: 0px;
-}
-
-prompt {
-    background-color: @blue;
-    padding: 6px;
-    text-color: @bg-col;
-    border-radius: 10px;
-    margin: 0px 0px 0px 0px;
-}
-
-textbox-prompt-colon {
-    expand: false;
-    str: ":";
-}
-
-entry {
-    padding: 6px;
-    margin: 0px 0px 0px 20px;
-    text-color: @fg-col;
-    background-color: @bg-col;
-}
-
-listview {
-    border: 0px 0px 0px;
-    padding: 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    columns: 1;
-    background-color: @bg-col;
-}
-
-element {
-    padding: 7px;
-    background-color: @bg-col;
-    text-color: @fg-col  ;
-}
-
-element-icon {
-    size: 25px;
-}
-
-element selected {
-    background-color:  @selected-col ;
-    text-color: @fg-col2  ;
-    border-radius: 10px;
-}
-
-mode-switcher {
-    spacing: 0;
-  }
-
-button {
-    padding: 9px;
-    background-color: @bg-col-light;
-    text-color: @grey;
-    vertical-align: 0.5; 
-    horizontal-align: 0.5;
-    border-radius: 10px;
-}
-
-button selected {
-  background-color: @bg-col;
-  text-color: @blue;
-}
+@theme "~/.config/rofi/catppuccin-lavrent-mocha.rasi"
