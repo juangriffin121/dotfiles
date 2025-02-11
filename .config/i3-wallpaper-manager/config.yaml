@@ -1,12 +1,12 @@
-default: /home/griffin/Pictures/wallpaper/binary/default.png
+default: /home/griffin/Pictures/wallpaper/newton/default.png
 workspaces:
-  "1": /home/griffin/Pictures/wallpaper/binary/1.png
-  "2": /home/griffin/Pictures/wallpaper/binary/2.png
-  "3": /home/griffin/Pictures/wallpaper/binary/3.png
-  "4": /home/griffin/Pictures/wallpaper/binary/4.png
-  "5": /home/griffin/Pictures/wallpaper/binary/5.png
-  "6": /home/griffin/Pictures/wallpaper/binary/6.png
-  "7": /home/griffin/Pictures/wallpaper/binary/7.png
-  "8": /home/griffin/Pictures/wallpaper/binary/8.png
-  "9": /home/griffin/Pictures/wallpaper/binary/9.png
-  "10": /home/griffin/Pictures/wallpaper/binary/10.png
+  "1": /home/griffin/Pictures/wallpaper/newton/1.png
+  "2": /home/griffin/Pictures/wallpaper/newton/2.png
+  "3": /home/griffin/Pictures/wallpaper/newton/3.png
+  "4": /home/griffin/Pictures/wallpaper/newton/4.png
+  "5": /home/griffin/Pictures/wallpaper/newton/5.png
+  "6": /home/griffin/Pictures/wallpaper/newton/6.png
+  "7": /home/griffin/Pictures/wallpaper/newton/7.png
+  "8": /home/griffin/Pictures/wallpaper/newton/8.png
+  "9": /home/griffin/Pictures/wallpaper/newton/9.png
+  "10": /home/griffin/Pictures/wallpaper/newton/10.png
