@@ -24,6 +24,7 @@ selected=$(echo -e "$options" | rofi -dmenu -i -p "Open Yazi in:")
 # Get the actual path from the selected display name and launch yazi
 if [ -n "$selected" ]; then
     target_dir="${dir_map[$selected]}"
-    kitty -e sh -c 'export EDITOR=nvim; cd "'"$target_dir"'" && yazi'
+    kitty -e bash -ic 'cd "'"$target_dir"'" && yazi'
+    # kitty -e bash -ic 'source "$HOME/.bashrc"; export EDITOR=nvim; cd "'"$target_dir"'" && yazi'
     # kitty -e sh -c 'cd "'"$target_dir"'" && yazi'
 fi
