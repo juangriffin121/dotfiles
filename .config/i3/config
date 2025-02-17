@@ -269,6 +269,7 @@ bindsym Shift+XF86MonBrightnessDown exec --no-startup-id light -U 1
 
 bindsym $mod+d exec launcher_t1
 bindsym $mod+Shift+d exec launcher_t3
+bindsym $mod+Shift+w exec quicklinks.sh
 # bindsym $mod+d exec rofi -show drun 
 exec --no-startup-id xset dpms 0 0 4800 
 exec --no-startup-id xset s 4800 4800
