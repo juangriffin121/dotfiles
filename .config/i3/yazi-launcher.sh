@@ -19,7 +19,7 @@ dir_map["  Config"]="$HOME/.config"
 options=$(printf "%s\n" "${!dir_map[@]}")
 
 # Show rofi menu with display names
-selected=$(echo -e "$options" | rofi -dmenu -i -p "Open Yazi in:")
+selected=$(echo -e "$options" | custom_menu1 -i -p "Open Yazi in:")
 
 # Get the actual path from the selected display name and launch yazi
 if [ -n "$selected" ]; then

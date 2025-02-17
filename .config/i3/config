@@ -235,7 +235,8 @@ default_floating_border pixel 2
 exec "setxkbmap -layout gb"
 
 # Custom key bindings
-bindsym $mod+shift+x exec i3lock -i /home/griffin/Pictures/wallpaper/i3lock.png --tiling
+bindsym $mod+Shift+x exec i3lock -i /home/griffin/Pictures/wallpaper/i3lock.png --tiling
+bindsym $mod+x exec powermenu_t1
 
 
 # Wallpaper
@@ -265,7 +266,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 bindsym Shift+XF86MonBrightnessUp exec --no-startup-id light -A 1
 bindsym Shift+XF86MonBrightnessDown exec --no-startup-id light -U 1
-bindsym $mod+d exec rofi -show drun 
+
+bindsym $mod+d exec launcher_t1
+bindsym $mod+Shift+d exec launcher_t3
+# bindsym $mod+d exec rofi -show drun 
 exec --no-startup-id xset dpms 0 0 4800 
 exec --no-startup-id xset s 4800 4800
 bindsym $mod+Shift+s exec gnome-screenshot -a
@@ -275,8 +279,9 @@ for_window [class="Gvim" instance="gvim"] floating enable
 bindsym $mod+Shift+v exec ~/.vim-anywhere/bin/run 
 bindsym $mod+Shift+y exec /home/griffin/.config/i3/yazi-launcher.sh
 bindsym $mod+y exec kitty -e bash -ic 'yazi'
-bindsym $mod+Shift+Return exec kitty
 # bindsym $mod+y exec kitty -e yazi
+bindsym $mod+Shift+Return exec kitty
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 smart_gaps on
 
@@ -288,5 +293,6 @@ gaps outer 0
 
 exec --no-startup-id /home/griffin/.local/bin/start_kmonad.sh
 exec --no-startup-id nm-applet
+exec --no-startup-id greenclip daemon
 # exec --no-startup-id DISPLAY=:0 i3-wallpaper-manager /home/griffin/.config/i3-wallpaper-manager/config.yaml
 
