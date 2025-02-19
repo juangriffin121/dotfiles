@@ -235,7 +235,8 @@ default_floating_border pixel 2
 exec "setxkbmap -layout gb"
 
 # Custom key bindings
-bindsym $mod+Shift+x exec i3lock -i /home/griffin/Pictures/wallpaper/i3lock.png --tiling
+# bindsym $mod+Shift+x exec i3lock -i /home/griffin/Pictures/wallpaper/i3lock.png --tiling
+bindsym $mod+Shift+x exec betterlockscreen -l
 bindsym $mod+x exec powermenu_t1
 
 
