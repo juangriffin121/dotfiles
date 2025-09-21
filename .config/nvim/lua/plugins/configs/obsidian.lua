@@ -2,7 +2,7 @@ return {
   workspaces = {
     {
       name = "personal",
-      path = "/mnt/win_share/Users/Usuario/Obsidian Vault/",
+      path = "/home/griffin/ObsidianVault/",
     },
   },
   ui = {enable = false},

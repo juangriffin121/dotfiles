@@ -18,7 +18,7 @@ exec --no-startup-id picom --experimental-backends -b
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 10
+font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 8
 #font pango:DejaVu Sans Mono 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
@@ -231,6 +231,7 @@ bar {
 
 default_border pixel 2
 default_floating_border pixel 2
+title_align center
 
 exec "setxkbmap -layout gb"
 
@@ -296,5 +297,6 @@ gaps outer 0
 exec --no-startup-id /home/griffin/.local/bin/start_kmonad.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id greenclip daemon
+exec --no-startup-id greenclip clear
 # exec --no-startup-id DISPLAY=:0 i3-wallpaper-manager /home/griffin/.config/i3-wallpaper-manager/config.yaml
 

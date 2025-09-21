@@ -163,7 +163,7 @@ function y() {
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export PATH="$HOME/.fzf/bin:$PATH"
-alias nfz='nvim $(fzf --preview="batcat --color=always {}")'
+alias kkk='nvim $(fzf --preview="batcat --color=always {}")'
 alias new='alacritty msg create-window --working-directory $(pwd)'
 
 export NVM_DIR="$HOME/.nvm"

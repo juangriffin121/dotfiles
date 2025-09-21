@@ -131,3 +131,5 @@ vim.g.clipboard = {
 
 vim.api.nvim_set_keymap('x', '<C-c>', '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('x', '<C-v>', '¨+p', { noremap = true, silent = true })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {desc = "Center cursor after moving down half-page"})
+vim.keymap.set("n", "<C-u>", "<C-u>zz", {desc = "Center cursor after moving down half-page"})

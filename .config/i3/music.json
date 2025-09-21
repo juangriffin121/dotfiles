@@ -1,0 +1,117 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1061,
+       "width": 1920,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "ncmpcpp 0.10.1",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^kitty$",
+       // "instance": "^kitty$",
+       // "machine": "^griffin\\-Lenovo\\-ideapad\\-110\\-15ISK$",
+       // "title": "^ncmpcpp\\ 0\\.10\\.1$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1061,
+               "width": 1920,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "cava",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^kitty$",
+               // "instance": "^kitty$",
+               // "machine": "^griffin\\-Lenovo\\-ideapad\\-110\\-15ISK$",
+               // "title": "^cava$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            // splith split container with 2 children
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 1061,
+                       "width": 1920,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "~/Music",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       // "class": "^kitty$",
+                       // "instance": "^kitty$",
+                       // "machine": "^griffin\\-Lenovo\\-ideapad\\-110\\-15ISK$",
+                       // "title": "^\\~\\/Music$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 2,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 328,
+                       "width": 934,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "bluetoothctl ",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                       // "class": "^kitty$",
+                       // "instance": "^kitty$",
+                       // "machine": "^griffin\\-Lenovo\\-ideapad\\-110\\-15ISK$",
+                       // "title": "^bluetoothctl\\ $"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+

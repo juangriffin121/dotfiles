@@ -1,6 +1,6 @@
 # Set a custom session root path. Default is `$HOME`.
 # Must be called before `initialize_session`.
-session_root "/mnt/win_share/Users/Usuario/Obsidian Vault/"
+session_root "/home/griffin/ObsidianVault/"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
@@ -17,6 +17,11 @@ if initialize_session "obsidian"; then
   # y is a shorthand function for yasi that allows me to cwd when i press q, it has to have the function written in .bashrc
   run_cmd "y"
   #load_window "example"
+  new_window "git"
+
+
+  run_cmd "lazygit"
+
   select_window 1
 
 fi

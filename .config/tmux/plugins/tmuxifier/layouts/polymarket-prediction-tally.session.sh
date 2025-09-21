@@ -10,16 +10,23 @@ if initialize_session "polymarket-prediction-tally"; then
   split_h 50
   select_pane 1
   run_cmd "nvim"
-  select_pane 2
-  run_cmd "neofetch"
-  select_pane 1
-  
+
   new_window "files"
   run_cmd "y"
   # y is a shorthand function for yasi that allows me to cwd when i press q, it has to have the function written in .bashrc
 
   new_window "git"
   run_cmd "lazygit"
+
+
+  new_window "tests"
+  split_h 50
+  select_pane 1
+  run_cmd "nvim"
+
+  new_window "database"
+  run_cmd "nvim"
+
 
   select_window 1
 fi

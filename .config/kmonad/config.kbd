@@ -20,6 +20,13 @@
 (defalias
   tm (tap-hold 250 tab lmet))
 
+(defalias
+  ,a (tap-hold 250 , lalt))
+
+(defalias
+  's (tap-hold 250 ' lsft))
+
+
 (defalias lte  (layer-toggle emode))
 
 (defalias lse  (layer-switch emode))
@@ -27,6 +34,10 @@
 (defalias lsi  (layer-switch base))
 
 (defalias ltp  (layer-toggle program))
+
+(defalias ltd  (layer-toggle delete))
+
+(defalias ltv  (layer-toggle visual))
 
 (defalias
    lste (tap-hold 250 @lse @lte))
@@ -37,21 +48,47 @@
 (defalias
   stog  (tap-hold 250 spc @ltp))
 
+(defalias
+  ddl (tap-hold 250 d @ltd))
+
+(defalias
+  vvl (tap-hold 250 v @ltv))
+
+(defalias db (around lctl (around lsft bspc)))
+
+(defalias dw (around lctl (around lsft del)))
+
+(defalias mb (around lctl left))
+
+(defalias mw (around lctl right))
+
+(defalias vb (around lctl (around lsft left)))
+
+(defalias vw (around lctl (around lsft right)))
+
+(defalias vl (around lsft left))
+
+(defalias vr (around lsft right))
+
+(defalias vu (around lsft up))
+
+(defalias vd (around lsft down))
+
 (deflayer base
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  prnt ins del
+  caps f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  prnt ins del
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc       nlck kp/  kp*  kp-
   @tm q    w    e    r    t    y    u    i    o    p    [    ]    \          kp7  kp8  kp9  kp+
-  @ec a    s    d    f    g    h    j    k    l    ;    '    ret             kp4  kp5  kp6
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft up              kp1  kp2  kp3  kprt
-  lctl wkup lmet @lte  @stog           ralt cmp  rctl left down rght       kp0  kp.
+  @ec a    s    @ddl    f    g    h    j    k    l    ;    @'s    ret             kp4  kp5  kp6
+  lsft z    x    c    @vvl    b    n    m    @,a    .    /    rsft up              kp1  kp2  kp3  kprt
+  lctl lalt lmet @lte  @stog           ralt cmp  rctl left down rght       kp0  kp.
 )
 
 (deflayer emode
   XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX  
   XX  f1    f2    f3    f4    f5    f6    f7    f8    f9    f10    f11    f12    XX XX  XX  XX 
-  @tm XX  XX  XX  XX  XX  XX  home  pgup  @lsi  XX  XX  XX  XX  XX  XX  XX  XX XX 
+  @tm  XX  XX  @mw  @mw  XX  XX  XX  XX XX XX  XX  XX  XX  XX  XX  XX  XX XX 
   @lsic XX  XX  XX  XX  XX  left    down    up    right    XX XX  XX  XX  XX XX  
-  lsft bspc del XX  XX  end  pgdn  XX  XX  XX  XX  XX  XX  XX  XX  XX XX  
+  lsft XX XX XX  XX  @mb XX XX  XX  XX  XX  XX  XX  XX  XX  XX XX  
   lctl XX  XX  @lsi  XX  XX  XX  XX  XX  XX  XX  XX  XX
 )
 
@@ -63,3 +100,22 @@
   XX  XX  XX  XX  XX  XX  XX  =    XX  XX  XX  XX  XX  XX  XX XX XX  
   XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX
 )
+
+(deflayer delete 
+  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX  
+  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX 
+  XX  XX  @dw  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  XX  XX 
+  lctl  XX  XX  XX  XX  XX  bspc  XX  XX  del  XX  XX  XX  XX  XX XX  
+  lsft  XX  XX  XX  XX  @db  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  
+  lctl  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX
+)
+
+(deflayer visual 
+  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX  
+  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX 
+  XX  XX XX  @vw  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  XX  XX 
+  lctl  XX  XX  XX  XX  XX  @vl @vd  @vu @vr XX  XX  XX  XX  XX XX  
+  lsft  XX  XX  XX  XX  @vb  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  
+  lctl  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX
+)
+
