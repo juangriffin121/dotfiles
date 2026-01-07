@@ -54,9 +54,9 @@
 (defalias
   vvl (tap-hold 250 v @ltv))
 
-(defalias db (around lctl (around lsft bspc)))
+(defalias db (around lctl bspc))
 
-(defalias dw (around lctl (around lsft del)))
+(defalias dw (around lctl del))
 
 (defalias mb (around lctl left))
 
@@ -104,8 +104,8 @@
 (deflayer delete 
   XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX  
   XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX 
-  XX  XX  @dw  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  XX  XX 
-  lctl  XX  XX  XX  XX  XX  bspc  XX  XX  del  XX  XX  XX  XX  XX XX  
+  XX  XX  XX  @dw  @dw  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  XX  XX 
+  lctl  XX  XX  XX  XX  XX  bspc  up  down  del  XX  XX  XX  XX  XX XX  
   lsft  XX  XX  XX  XX  @db  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  
   lctl  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX
 )
@@ -113,7 +113,7 @@
 (deflayer visual 
   XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX  
   XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX 
-  XX  XX XX  @vw  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  XX  XX 
+  XX  XX XX  @vw  @vw  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  XX  XX 
   lctl  XX  XX  XX  XX  XX  @vl @vd  @vu @vr XX  XX  XX  XX  XX XX  
   lsft  XX  XX  XX  XX  @vb  XX  XX  XX  XX  XX  XX  XX  XX  XX XX XX  
   lctl  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX
