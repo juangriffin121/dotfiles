@@ -281,10 +281,13 @@ bindsym F10 exec /home/griffin/.config/i3/monitors_rofi.sh
 for_window [class="Gvim" instance="gvim"] floating enable
 bindsym $mod+Shift+v exec ~/.vim-anywhere/bin/run 
 bindsym $mod+Shift+y exec /home/griffin/.config/i3/yazi-launcher.sh
+bindsym $mod+Shift+t exec /home/griffin/.config/i3/tmux-launcher.sh
 bindsym $mod+y exec kitty -e bash -ic 'yazi'
 # bindsym $mod+y exec kitty -e yazi
 bindsym $mod+Shift+Return exec kitty
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+bindsym $mod+p exec sioyek
+
 
 smart_gaps on
 
