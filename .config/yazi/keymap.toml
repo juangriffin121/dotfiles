@@ -365,3 +365,11 @@ on = [ "g", "r" ]
 run = '''
 	shell 'ya emit cd "$(git rev-parse --show-toplevel)"'
 '''
+
+[[manager.prepend_keymap]]
+
+ # Written by me
+on = "<C-S-p>"
+run = "shell 'img2pdf \"$@\" -o output.pdf'"
+desc = "Combine selected images into a pdf file"
+
