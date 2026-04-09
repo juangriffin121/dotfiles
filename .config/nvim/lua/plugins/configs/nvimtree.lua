@@ -1,4 +1,24 @@
+local function on_attach(bufnr)
+  local api = require("nvim-tree.api")
+
+  local function opts(desc)
+    return {
+      desc = "nvim-tree: " .. desc,
+      buffer = bufnr,
+      noremap = true,
+      silent = true,
+      nowait = true,
+    }
+  end
+
+  api.config.mappings.default_on_attach(bufnr)
+
+  -- Restore predictable single-click behavior on newer nvim-tree versions.
+  vim.keymap.set("n", "<LeftRelease>", api.node.open.edit, opts("Open"))
+end
+
 local options = {
+  on_attach = on_attach,
   filters = {
     dotfiles = false,
     exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
@@ -28,6 +48,9 @@ local options = {
   actions = {
     open_file = {
       resize_window = true,
+      window_picker = {
+        enable = false,
+      },
     },
   },
   renderer = {

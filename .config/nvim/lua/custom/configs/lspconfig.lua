@@ -1,28 +1,30 @@
 local config = require("plugins.configs.lspconfig")
 
-local on_attach = config.on_attach
 local capabilities = config.capabilities
 
-local lspconfig = require("lspconfig")
-local util = require "lspconfig/util"
-
-
-lspconfig.pyright.setup({
-  on_attach = on_attach,
+vim.lsp.config("pyright", {
   capabilities = capabilities,
-  filetypes = {"python"},
 })
 
-lspconfig.rust_analyzer.setup({
-  on_attach = on_attach,
+vim.lsp.enable("pyright")
+
+vim.lsp.config("ruff", {
   capabilities = capabilities,
-  filetypes = "rust",
-  root_dir = util.root_pattern("Cargo.toml"),
+})
+
+vim.lsp.enable("ruff")
+
+vim.lsp.config("rust_analyzer", {
+  capabilities = capabilities,
+  root_markers = { "Cargo.toml", "rust-project.json", ".git" },
   settings = {
-    ['rust-analyzer'] = {
-      cargo = {
-        allFeatures = true,
+    ["rust-analyzer"] = {
+      cargo = {},
+      lens = {
+        enable = false,
       },
     },
   },
 })
+
+vim.lsp.enable("rust_analyzer")
