@@ -142,8 +142,8 @@ eval "$(tmuxifier init -)"
 alias clang='clang-17'
 alias myscripts='cd /mnt/win_share/Users/Usuario/my_scripts/'
 
-alias "c=xclip"
-alias "v=xclip -o"
+alias "c=xclip -selection clipboard"
+alias "v=xclip -selection clipboard -o"
 
 set -o vi
 
