@@ -136,7 +136,6 @@ eval "$(pyenv virtualenv-init -)"
 
 export PATH="$HOME/.local/bin:$PATH"
 
-export EDITOR='nvim'
 export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 alias clang='clang-17'
@@ -180,3 +179,5 @@ eval "$(zoxide init --cmd cd bash)"
 eval `dircolors ~/git/Catppuccin-dircolors/bliss.dircolors`
 
 export PATH="$HOME/.local/nvim/bin:$PATH"
+export EDITOR='nvim'
+export VISUAL="nvim"
