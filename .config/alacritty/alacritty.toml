@@ -1,6 +1,3 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
 [env]
 WINIT_X11_SCALE_FACTOR = "0.9"
 [window]
@@ -13,3 +10,8 @@ normal.family = "Hack Nerd Font Propo"
 bold.family = "Hack Nerd Font Propo"
 italic.family = "Hack Nerd Font Propo"
 bold_italic.family = "Hack Nerd Font Propo"
+
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
