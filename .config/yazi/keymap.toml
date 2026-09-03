@@ -368,8 +368,13 @@ run = '''
 
 [[manager.prepend_keymap]]
 
- # Written by me
+# Written by me
 on = "<C-S-p>"
 run = "shell 'img2pdf \"$@\" -o output.pdf'"
 desc = "Combine selected images into a pdf file"
+
+[[manager.prepend_keymap]]
+on   = "<C-o>"
+run  = "plugin open-with"
+desc = "Open with (all installed apps)"
 
