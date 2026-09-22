@@ -32,7 +32,7 @@ hide_edge_borders smart
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+q kill
 
@@ -284,7 +284,7 @@ bindsym $mod+Shift+y exec /home/griffin/.config/i3/yazi-launcher.sh
 bindsym $mod+Shift+t exec /home/griffin/.config/i3/tmux-launcher.sh
 bindsym $mod+y exec kitty -e bash -ic 'yazi'
 # bindsym $mod+y exec kitty -e yazi
-bindsym $mod+Shift+Return exec kitty
+bindsym $mod+Shift+Return exec alacritty
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+p exec sioyek
 bindsym $mod+t exec "~/.local/bin/datecalc-rofi"
