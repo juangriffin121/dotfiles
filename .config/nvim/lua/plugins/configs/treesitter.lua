@@ -1,8 +1,1 @@
-local options = {
-  ensure_installed = { "lua", "latex"},
-  highlight = { enable = true, use_languagetree = true },
-  indent = { enable = true },
-}
-
-
-return options
+return { ensure_installed = { "lua", "markdown", "markdown_inline", "astro", "c", "query" } }
